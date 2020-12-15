@@ -4,8 +4,22 @@ session_start();
 
 <header>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: rgba(29, 26, 26, 0.493);" id="header">
-<a class="navbar-brand" href="http://localhost/PP2/livre-or/index.php">
-    <img src="http://localhost/PP2/livre-or/media/lapin_logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+<a class="navbar-brand" href=" <?php 
+                if (!isset($repere)) {
+                    echo '../index.php';
+                }
+                else {
+                    echo 'index.php';
+                }?>
+                ">
+    <img src="<?php 
+                if (!isset($repere)) {
+                    echo '../media/lapin_logo.png';
+                }
+                else {
+                    echo 'media/lapin_logo.png';
+                }?>
+                " width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
     Save a Little Bunny
   </a>
   <button class="navbar-toggler navbar-toggler-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
